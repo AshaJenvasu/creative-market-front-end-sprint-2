@@ -20,36 +20,42 @@ const AboutUs = () => {
       handle: "@lattawanksp",
       color: "text-[#FFF000]",
       img: lin,
+      githubUrl: "https://github.com/lattawanksp",
     },
     {
       id: 2,
       handle: "@Wathisa",
       color: "text-[#FFA6D9]",
       img: sign,
+      githubUrl: "https://github.com/Wathisa",
     },
     {
       id: 3,
       handle: "@AshaJenvasu",
       color: "text-[#FF2A2A]",
       img: asha,
+      githubUrl: "https://github.com/AshaJenvasu",
     },
     {
       id: 4,
       handle: "@devmontri-github",
       color: "text-[#1E67FF]",
       img: tri,
+      githubUrl: "https://github.com/devmontri-gitlhub",
     },
     {
       id: 5,
       handle: "@jolynestarchaser",
       color: "text-[#00FF00]",
       img: joe,
+      githubUrl: "https://github.com/jolynestarchaser",
     },
     {
       id: 6,
       handle: "@billie89-33",
       color: "text-[#D16BFF]",
       img: bank,
+      githubUrl: "https://github.com/billie89-33",
     },
   ];
 
@@ -100,23 +106,31 @@ const AboutUs = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-12 w-full place-items-center">
           {teamMembers.map((member) => (
-            <div
+            <a
+              href={member.githubUrl}
               key={member.id}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col items-center group cursor-pointer"
             >
-              {/* รูปหน้าคน */}
-              <div className="w-32 h-32 md:w-36 md:h-36 mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
-                <img
-                  src={member.img}
-                  alt={member.handle}
-                  className="w-full h-full object-contain drop-shadow-md"
-                />
+              <div
+                key={member.id}
+                className="flex flex-col items-center group cursor-pointer"
+              >
+                {/* รูปหน้าคน */}
+                <div className="w-32 h-32 md:w-36 md:h-36 mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
+                  <img
+                    src={member.img}
+                    alt={member.handle}
+                    className="w-full h-full object-contain drop-shadow-md"
+                  />
+                </div>
+                {/* ชื่อ handle (ใช้สีตามที่กำหนดใน Array) */}
+                <p className={`text-xs md:text-sm font-medium ${member.color}`}>
+                  {member.handle}
+                </p>
               </div>
-              {/* ชื่อ handle (ใช้สีตามที่กำหนดใน Array) */}
-              <p className={`text-xs md:text-sm font-medium ${member.color}`}>
-                {member.handle}
-              </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
