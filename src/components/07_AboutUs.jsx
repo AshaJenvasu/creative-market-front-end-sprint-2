@@ -1,0 +1,127 @@
+import React from "react";
+// อย่าลืม Import รูปของหนูเข้ามานะจ๊ะ พี่สาวใส่ชื่อสมมติไว้ให้ก่อนจ้ะ
+import logoCreative from "../assets/logos/about-us-main-logo.svg";
+import leftStarIcon from "../assets/icons/about-us-left-star.svg";
+import rightStarIcon from "../assets/icons/about-us-right-star.svg";
+import lin from "../assets/icons/about-us-lin.svg";
+import sign from "../assets/icons/about-us-sign.svg";
+import asha from "../assets/icons/about-us-asha.svg";
+import tri from "../assets/icons/about-us-tri.svg";
+import joe from "../assets/icons/about-us-joe.svg";
+import bank from "../assets/icons/about-us-bank.svg";
+
+// import team2 from "../assets/images/team-2.png";
+// ... (import ให้ครบ 6 คน)
+
+const AboutUs = () => {
+  const teamMembers = [
+    {
+      id: 1,
+      handle: "@lattawanksp",
+      color: "text-[#FFF000]",
+      img: lin,
+    },
+    {
+      id: 2,
+      handle: "@Wathisa",
+      color: "text-[#FFA6D9]",
+      img: sign,
+    },
+    {
+      id: 3,
+      handle: "@AshaJenvasu",
+      color: "text-[#FF2A2A]",
+      img: asha,
+    },
+    {
+      id: 4,
+      handle: "@devmontri-github",
+      color: "text-[#1E67FF]",
+      img: tri,
+    },
+    {
+      id: 5,
+      handle: "@jolynestarchaser",
+      color: "text-[#00FF00]",
+      img: joe,
+    },
+    {
+      id: 6,
+      handle: "@billie89-33",
+      color: "text-[#D16BFF]",
+      img: bank,
+    },
+  ];
+
+  return (
+    <section className=" hidden md:block w-full bg-[#111016] text-white py-24 px-6 font-['Anuphan',_sans-serif]">
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
+        {/* ================= 1. ABOUT US HEADER ================= */}
+        <h2 className="text-3xl font-bold mb-10 tracking-wide">About us</h2>
+
+        {/* Logo & Stars Row */}
+        <div className="flex items-center justify-center gap-6 md:gap-34 w-full mb-10">
+          {/* ดาวดวงซ้าย */}
+          <img
+            src={leftStarIcon}
+            alt="star"
+            className="w-8 md:w-12 hidden md:block"
+          />
+
+          {/* Main Logo Text */}
+          <img
+            src={logoCreative}
+            alt="Creative Market"
+            className="w-full max-w-[280px] md:max-w-3xl"
+          />
+
+          {/* ดาวดวงขวา */}
+          <img
+            src={rightStarIcon}
+            alt="star"
+            className="w-8 md:w-12 hidden md:block"
+          />
+        </div>
+
+        {/* Description Text */}
+        <p className="text-center text-[#AFA9EC] max-w-4xl text-sm md:text-base leading-relaxed mb-32">
+          the ultimate marketplace dedicated 100% to human-made art, crafts, and
+          design. We firmly believe that art is a profound language used to
+          communicate human emotions, lived experiences, and the soul—a unique
+          and authentic charm that no technology or Artificial Intelligence can
+          ever replicate.
+        </p>
+
+        {/* ================= 2. MEET THE TEAM ================= */}
+        <h3 className="text-2xl font-bold mb-16 tracking-wide">
+          Meet the team
+        </h3>
+
+        {/* Team Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-12 w-full place-items-center">
+          {teamMembers.map((member) => (
+            <div
+              key={member.id}
+              className="flex flex-col items-center group cursor-pointer"
+            >
+              {/* รูปหน้าคน */}
+              <div className="w-32 h-32 md:w-36 md:h-36 mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
+                <img
+                  src={member.img}
+                  alt={member.handle}
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
+              </div>
+              {/* ชื่อ handle (ใช้สีตามที่กำหนดใน Array) */}
+              <p className={`text-xs md:text-sm font-medium ${member.color}`}>
+                {member.handle}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutUs;
