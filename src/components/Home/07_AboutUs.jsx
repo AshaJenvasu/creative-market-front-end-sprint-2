@@ -1,17 +1,14 @@
 import React from "react";
-// อย่าลืม Import รูปของหนูเข้ามานะจ๊ะ พี่สาวใส่ชื่อสมมติไว้ให้ก่อนจ้ะ
-import logoCreative from "../assets/logos/about-us-main-logo.svg";
-import leftStarIcon from "../assets/icons/about-us-left-star.svg";
-import rightStarIcon from "../assets/icons/about-us-right-star.svg";
-import lin from "../assets/icons/about-us-lin.svg";
-import sign from "../assets/icons/about-us-sign.svg";
-import asha from "../assets/icons/about-us-asha.svg";
-import tri from "../assets/icons/about-us-tri.svg";
-import joe from "../assets/icons/about-us-joe.svg";
-import bank from "../assets/icons/about-us-bank.svg";
 
-// import team2 from "../assets/images/team-2.png";
-// ... (import ให้ครบ 6 คน)
+import logoCreative from "../../assets/logos/about-us-main-logo.svg";
+import leftStarIcon from "../../assets/icons/about-us-left-star.svg";
+import rightStarIcon from "../../assets/icons/about-us-right-star.svg";
+import lin from "../../assets/icons/about-us-lin.svg";
+import sign from "../../assets/icons/about-us-sign.svg";
+import asha from "../../assets/icons/about-us-asha.svg";
+import tri from "../../assets/icons/about-us-tri.svg";
+import joe from "../../assets/icons/about-us-joe.svg";
+import bank from "../../assets/icons/about-us-bank.svg";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -125,7 +122,7 @@ const AboutUs = () => {
                     className="w-full h-full object-contain drop-shadow-md"
                   />
                 </div>
-                {/* ชื่อ handle (ใช้สีตามที่กำหนดใน Array) */}
+                {/* ชื่อ handle  */}
                 <p className={`text-xs md:text-sm font-medium ${member.color}`}>
                   {member.handle}
                 </p>

@@ -1,7 +1,7 @@
-import spotlightSvg from "../assets/logos/highlight-artist-spotlight.svg";
-import spotlightUnderlineSvg from "../assets/logos/highlight-artist-spotlight-underline.svg";
-import artistImg from "../assets/images/highlight-artist.png";
-import shibaImg from "../assets/images/highlight-shiba.png";
+import spotlightSvg from "../../assets/logos/highlight-artist-spotlight.svg";
+import spotlightUnderlineSvg from "../../assets/logos/highlight-artist-spotlight-underline.svg";
+import artistImg from "../../assets/images/highlight-artist.png";
+import shibaImg from "../../assets/images/highlight-shiba.png";
 
 const Highlight = () => {
   return (

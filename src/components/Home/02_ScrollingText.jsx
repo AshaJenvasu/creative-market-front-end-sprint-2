@@ -1,4 +1,4 @@
-import heartIcon from "../assets/icons/heart.svg";
+import heartIcon from "../../assets/icons/heart.svg";
 
 const baseItems = ["ART", "MUSIC", "SCULPTURE", "HANDMADE", "PAINTING"];
 

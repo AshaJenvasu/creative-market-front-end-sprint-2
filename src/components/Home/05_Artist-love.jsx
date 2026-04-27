@@ -1,8 +1,8 @@
 import React from "react";
-import underline from "../assets/logos/artist-love-underline.svg";
-import img1 from "../assets/images/artist-love-1.png";
-import img2 from "../assets/images/artist-love-2.png";
-import img3 from "../assets/images/artist-love-3.png";
+import underline from "../../assets/logos/artist-love-underline.svg";
+import img1 from "../../assets/images/artist-love-1.png";
+import img2 from "../../assets/images/artist-love-2.png";
+import img3 from "../../assets/images/artist-love-3.png";
 const ArtistLove = () => {
   return (
     <section className="hidden md:block w-full bg-white py-20 overflow-hidden font-['Rock_Salt',cursive]">

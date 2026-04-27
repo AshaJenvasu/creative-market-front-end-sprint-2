@@ -1,7 +1,7 @@
-import marketLimited from "../assets/images/market-limited.png";
-import marketCard1 from "../assets/images/market-card-1.png";
-import marketCard2 from "../assets/images/market-card-2.png";
-import marketCard3 from "../assets/images/market-card-3.png";
+import marketLimited from "../../assets/images/market-limited.png";
+import marketCard1 from "../../assets/images/market-card-1.png";
+import marketCard2 from "../../assets/images/market-card-2.png";
+import marketCard3 from "../../assets/images/market-card-3.png";
 
 const Market = () => {
   return (

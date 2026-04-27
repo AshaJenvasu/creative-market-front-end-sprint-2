@@ -1,5 +1,5 @@
-import bgImage from "../assets/images/hero-img.png";
-import creativeText from "../assets/logos/hero.svg";
+import bgImage from "../../assets/images/hero-img.png";
+import creativeText from "../../assets/logos/hero.svg";
 
 const Hero = () => {
   return (
