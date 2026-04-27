@@ -2,6 +2,7 @@
 
 **Creative Market** is a premier digital marketplace dedicated 100% to human-made art, crafts, and design. We believe that true art is a profound language used to communicate human emotions, lived experiences, and the soul—a unique charm that no AI can ever replicate.
 
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)(https://creative-market-front-end-sprint-2-mu.vercel.app/)
 ---
 
 ## ✨ Key Features
