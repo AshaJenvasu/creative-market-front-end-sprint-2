@@ -7,17 +7,24 @@ import ProductShowcase from "../components/Product/06_ProductShowcase";
 
 const Product = () => {
   return (
-    <main>
+    <main className="min-h-screen w-full bg-[#eeecfb]">
       <ProductHeaderBar />
-      <section>
-        <ProductGallery />
-        <div>
-          <ProductInfo />
-          <ArtistInfo />
-          <ProductPurchasePanel />
+
+      <section className="mx-auto flex max-w-7xl flex-col gap-8 px-6 pb-12 md:px-8">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1fr] lg:items-start">
+          <div className="w-full">
+            <ProductGallery />
+          </div>
+
+          <div className="flex w-full flex-col gap-8">
+            <ProductInfo />
+            <ArtistInfo />
+            <ProductPurchasePanel />
+          </div>
         </div>
+
+        <ProductShowcase />
       </section>
-      <ProductShowcase />
     </main>
   );
 };
