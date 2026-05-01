@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSearchParams } from "react-router";
 import { FaSearch, FaFilter } from "react-icons/fa";
 import ProductCard from "../components/Market/ProductCard";
 import MarketHeader from "../components/Market/MarketHeader";
@@ -10,7 +11,14 @@ import sellerSample from "../assets/logos/market-sellerSample.svg";
 const Market = () => {
   const [isFilterActive, setIsFilterActive] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+
+  //จัดการเรื่อง URL Query Params
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeCategory = searchParams.get("category") || "All";
+
+  const handleCategoryChange = (newCategory) => {
+    setSearchParams({ category: newCategory });
+  };
 
   const categories = ["All", "Visual Art", "Craft & Handmade", "Music & Sound"];
 
@@ -103,7 +111,7 @@ const Market = () => {
           isFilterActive={isFilterActive}
           setIsFilterActive={setIsFilterActive}
           activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
+          setActiveCategory={handleCategoryChange}
           categories={categories}
         />
         {/* ================= 2. PRODUCT GRID ================= */}
