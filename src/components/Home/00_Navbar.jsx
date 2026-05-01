@@ -55,12 +55,18 @@ const Navbar = () => {
                   <Link to="/market?category=Visual Art">Visual Art</Link>
                 </li>
                 <li className="px-6 py-2 hover:bg-gray-900 hover:text-white transition-colors">
-                  <Link to="market?category=Craft & Handmade">
+                  <Link
+                    to={`/market?category=${encodeURIComponent("Craft & Handmade")}`}
+                  >
                     Craft & Handmade
                   </Link>
                 </li>
                 <li className="px-6 py-2 hover:bg-gray-900 hover:text-white transition-colors">
-                  <Link to="market?category=Music & Sound">Music & Sound</Link>
+                  <Link
+                    to={`/market?category=${encodeURIComponent("Music & Sound")}`}
+                  >
+                    Music & Sound
+                  </Link>
                 </li>
               </ul>
             </div>
